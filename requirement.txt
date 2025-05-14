@@ -1,0 +1,6 @@
+kanren
+sympy
+func_timeout
+multiprocess
+flask
+openai
