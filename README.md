@@ -7,13 +7,19 @@
 
 ---
 
-**Authors**
+## 👥 Authors
 
-Junbo Zhao<sup>1,†</sup>, Ting Zhang<sup>1,†</sup>, Jiayu Sun<sup>1</sup>, Mi Tian<sup>2</sup>, Hua Huang<sup>1,*</sup>  
-<sup>1</sup>Beijing Normal University  
-<sup>2</sup>TAL  
-<sup>†</sup> Equal contribution.  
-<sup>*</sup> Corresponding author.  
+<div align="center">
+
+**Junbo Zhao**<sup>1†</sup> • **Ting Zhang**<sup>1†</sup> • **Jiayu Sun**<sup>1</sup> • **Mi Tian**<sup>2</sup> • **Hua Huang**<sup>1✉</sup>
+
+<sup>1</sup>Beijing Normal University　　<sup>2</sup>TAL
+
+<sub>† Equal contribution　　✉ Corresponding author</sub>
+
+📧 [zhaojunbo@mail.bnu.edu.cn](mailto:zhaojunbo@mail.bnu.edu.cn)
+
+</div>
 
 ---
 
