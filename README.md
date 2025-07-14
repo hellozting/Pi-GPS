@@ -9,18 +9,11 @@
 
 **Authors**
 
-| Name                     | Affiliation              | Note                      |
-|--------------------------|--------------------------|---------------------------|
-| Junbo Zhao  <sup>1†</sup>    | Beijing Normal University | Equal contribution        |
-| Ting Zhang <sup>1†</sup>     | Beijing Normal University | Equal contribution        |
-| Jiayu Sun  <sup>1</sup>      | Beijing Normal University |                           |
-| Mi Tian     <sup>2</sup>     | TAL                     |                           |
-| Hua Huang  <sup>1*</sup>     | Beijing Normal University | Corresponding author      |
-
-<sup>1</sup> Beijing Normal University  
-<sup>2</sup> TAL  
-† Equal contribution.  
-* Corresponding author. 
+Junbo Zhao<sup>1,†</sup>, Ting Zhang<sup>1,†</sup>, Jiayu Sun<sup>1</sup>, Mi Tian<sup>2</sup>, Hua Huang<sup>1,*</sup>  
+<sup>1</sup>Beijing Normal University  
+<sup>2</sup>TAL  
+<sup>†</sup> Equal contribution.  
+<sup>*</sup> Corresponding author.  
 
 ---
 
