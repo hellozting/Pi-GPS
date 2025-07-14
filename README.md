@@ -1,9 +1,31 @@
-# Pi-GPS
+<div align="center">
 
-🎉 **Accepted at ICCV 2025!** 🎉
+# 📐Pi-GPS:
 
-> *Pi-GPS: Enhancing Geometry Problem Solving by Unleashing the Power of Diagrammatic Information*  
-> [arXiv preprint](https://arxiv.org/abs/2503.05543)
+## *Enhancing Geometry Problem Solving by Unleashing the Power of Diagrammatic Information*
+
+<p align="center">
+  <img src="https://img.shields.io/badge/ICCV-2025-red?style=for-the-badge&logo=ieee&logoColor=white" alt="ICCV 2025">
+  <img src="https://img.shields.io/badge/Status-Accepted-brightgreen?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Paper-ArXiv-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper">
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2503.05543">📄 Paper</a> •
+  <a href="#-getting-started">🚀 Quick Start</a> •
+  <a href="#-performance">📊 Results</a> •
+  <a href="#-citation">📚 Citation</a>
+</p>
+
+---
+
+</div>
+
+## 🎉 Announcement
+
+**🏆 This paper has been accepted at ICCV 2025!** 🎉
+
+We're excited to share our work on geometry problem solving with the community!
 
 ---
 
@@ -17,86 +39,248 @@
 
 <sub>† Equal contribution　　✉ Corresponding author</sub>
 
-📧 [zhaojunbo@mail.bnu.edu.cn](mailto:zhaojunbo@mail.bnu.edu.cn)
 
 </div>
 
 ---
 
-We propose **Pi-GPS**, a novel framework for geometry problem solving that leverages diagrammatic information to resolve textual ambiguities.
+## 📖 Overview
+
+We propose **Pi-GPS**, a novel framework for geometry problem solving that leverages diagrammatic information to resolve textual ambiguities. Our approach combines multi-modal understanding with symbolic reasoning to achieve state-of-the-art performance.
 
 <div align="center">
-  <img src="images/framework.png" alt="Framework of Pi-GPS" width="70%">
+  <img src="images/framework.png" alt="Pi-GPS Framework" width="80%">
   <br>
-  <em>Figure 1. Framework of Pi-GPS</em>
+  <em>📐 Framework Overview of Pi-GPS</em>
 </div>
 
 ---
 
-## 🔍 Key Components
+## 🔍 Key Features
 
-- **Rectifier:**  
-  Utilizes multi-modal language models (MLLMs) to disambiguate text by incorporating diagrammatic context.
-- **Verifier:**  
-  Ensures that the refined text adheres to geometric rules, effectively reducing model hallucinations.
+<div align="center">
 
-## 🏆 Performance
+| Component | Description |
+|-----------|-------------|
+| 🔧 **Rectifier** | Utilizes multi-modal language models (MLLMs) to disambiguate text by incorporating diagrammatic context |
+| ✅ **Verifier** | Ensures refined text adheres to geometric rules, effectively reducing model hallucinations |
+| 🧠 **Symbolic Solver** | Combines neural parsing with symbolic reasoning for robust problem solving |
 
-Pi-GPS achieves state-of-the-art results on Geometry3K and PGPS9K, outperforming previous neural-symbolic methods by nearly 10%.
-
-<!-- Table can keep原格式或用更简洁的展示，下面略 -->
+</div>
 
 ---
 
-## 📦 Getting Started
+## 📊 Performance
 
-### 1. Prepare the Dataset
+🏆 **Pi-GPS achieves state-of-the-art results**, outperforming previous neural-symbolic methods by nearly **10%** on standard benchmarks!
 
-We use [Geometry3K](https://lupantech.github.io/inter-gps/#Dataset) and [PGPS9K](https://nlpr.ia.ac.cn/databases/CASIA-PGPS9K/).  
-Download and unzip data files into `data/geometry3k` and `data/PGPS9K`.
+<div align="center">
+  <table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+      <tr>
+        <th rowspan="2">Category</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Geometry3K</th>
+        <th colspan="2">PGPS9K</th>
+      </tr>
+      <tr>
+        <th>Completion</th>
+        <th>Choice</th>
+        <th>Completion</th>
+        <th>Choice</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- MLLMs -->
+      <tr>
+        <td rowspan="4">MLLMs</td>
+        <td>Qwen-VL</td>
+        <td>22.1</td>
+        <td>26.7</td>
+        <td>20.1</td>
+        <td>23.2</td>
+      </tr>
+      <tr>
+        <td>GPT-4o</td>
+        <td>34.8</td>
+        <td>58.6</td>
+        <td>33.3</td>
+        <td>51.0</td>
+      </tr>
+      <tr>
+        <td>Claude 3.5 Sonnet</td>
+        <td>32.0</td>
+        <td>56.4</td>
+        <td>27.6</td>
+        <td>45.9</td>
+      </tr>
+      <tr>
+        <td>Gemini 2</td>
+        <td>38.9</td>
+        <td>60.7</td>
+        <td>38.2</td>
+        <td>56.8</td>
+      </tr>
+      <!-- Neural Methods -->
+      <tr>
+        <td rowspan="6">Neural Methods</td>
+        <td>NGS</td>
+        <td>35.3</td>
+        <td>58.8</td>
+        <td>34.1</td>
+        <td>46.1</td>
+      </tr>
+      <tr>
+        <td>Geoformer</td>
+        <td>36.8</td>
+        <td>59.3</td>
+        <td>35.6</td>
+        <td>47.3</td>
+      </tr>
+      <tr>
+        <td>SCA-GPS</td>
+        <td>-</td>
+        <td>76.7</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>GOLD<sup>*</sup></td>
+        <td>-</td>
+        <td>62.7</td>
+        <td>-</td>
+        <td>60.6</td>
+      </tr>
+      <tr>
+        <td>PGPSNet-v2-S<sup>*</sup></td>
+        <td>65.2</td>
+        <td>76.4</td>
+        <td>60.3</td>
+        <td>69.2</td>
+      </tr>
+      <tr>
+        <td>LANS (Diagram GT)<sup>*</sup></td>
+        <td>72.1</td>
+        <td>82.3</td>
+        <td>66.7</td>
+        <td>74.0</td>
+      </tr>
+      <!-- Neural-symbolic Methods -->
+      <tr>
+        <td rowspan="4">Neural-symbolic Methods</td>
+        <td>Inter-GPS</td>
+        <td>43.4</td>
+        <td>57.5</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>GeoDRL</td>
+        <td>57.9</td>
+        <td>68.4</td>
+        <td>55.6</td>
+        <td>66.7</td>
+      </tr>
+      <tr>
+        <td>E-GPS</td>
+        <td>-</td>
+        <td>67.9</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Pi-GPS (ours)</td>
+        <td><b>70.6</b></td>
+        <td><b>77.8</b></td>
+        <td><b>61.4</b></td>
+        <td><b>69.8</b></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-In Geometry3K, images are stored in separate folders. To unify them, run:
+---
+
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-Latest-red?style=flat-square&logo=pytorch&logoColor=white)
+
+</div>
+
+### 📥 Installation
+
 ```bash
+# Clone the repository
+git clone https://github.com/hellozting/Pi-GPS.git
+cd Pi-GPS
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 📊 Dataset Preparation
+
+We use two standard geometry datasets:
+
+<div align="center">
+
+| Dataset | Link | Description |
+|---------|------|-------------|
+| 📐 **Geometry3K** | [Download](https://lupantech.github.io/inter-gps/#Dataset) | 3K geometry problems with diagrams |
+| 📊 **PGPS9K** | [Download](https://nlpr.ia.ac.cn/databases/CASIA-PGPS9K/) | 9K plane geometry problems |
+
+</div>
+
+Download and extract datasets:
+```bash
+# Extract images for unified processing
 python data/extract.py
 ```
 
-### 2. Environment
+---
 
-- Python >= 3.9
-- Install dependencies:
-  ```bash
-  pip install -r requirement.txt
-  ```
+## ⚡ Quick Start
 
-### 3. Run Pi-GPS (Preprocessed Data)
+### 🎯 Run with Pre-processed Data
 
 ```bash
 python Solver/test.py --label final
 ```
 
-### 4. Run Pi-GPS from Scratch
+### 🛠️ Run from Scratch
 
-**Text Parser**  
+<details>
+<summary>Click to expand step-by-step instructions</summary>
+
+#### 1️⃣ Text Parser
 ```bash
 python Parser/text_parser.py
 ```
 
-**Diagram Parser**  
-Refer to [PGDPNet](https://github.com/mingliangzhang2018/PGDP).
+#### 2️⃣ Diagram Parser
+Follow [PGDPNet](https://github.com/mingliangzhang2018/PGDP) setup instructions.
 
-**Disambiguation Module**  
+#### 3️⃣ Disambiguation Module
 ```bash
+# Add points to images
 python Disambiguation_module/addPointsToImage.py
+
+# Set your MLLM API in Disambiguation_module/align.py
 python Disambiguation_module/GuidedAlign.py
 ```
-Set your MLLM API in `Disambiguation_module/align.py` before running.
 
-**Theorem Predictor**  
+#### 4️⃣ Theorem Predictor
 ```bash
+# Set your LLM API in Theorem_predictor/LLMPredict.py
 python Theorem_predictor/LLMPredict.py
 ```
 
-**Solver**  
+#### 5️⃣ Solver
 ```bash
 python Solver/test.py --label final_result \
   --text_logic_form_path Disambiguation_module/disambiguated_text_logic_forms_pred.json \
@@ -104,23 +288,61 @@ python Solver/test.py --label final_result \
   --predict_path Theorem_predictor/LLM_pred_seq.json
 ```
 
+</details>
+
 ---
 
-## 📄 Citation
+## 📚 Citation
 
-If you find our paper or code helpful, please cite:
+If you find our work helpful, please consider citing:
+
 ```bibtex
 @inproceedings{zhao2025pigps,
   title={Pi-GPS: Enhancing Geometry Problem Solving by Unleashing the Power of Diagrammatic Information},
   author={Junbo Zhao and Ting Zhang and Jiayu Sun and Mi Tian and Hua Huang},
-  booktitle={ICCV},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2025}
 }
 ```
 
 ---
 
-## 🙏 Acknowledgements
+## 🤝 Contributing
 
-Our code builds upon [Inter-GPS](https://github.com/lupantech/InterGPS), [PGDP](https://github.com/mingliangzhang2018/PGDP), and [GeoDRL](https://aclanthology.org/2023.findings-acl.850/).  
-For questions or suggestions, please contact the first author ([zhaojunbo@mail.bnu.edu.cn](mailto:zhaojunbo@mail.bnu.edu.cn)) or open an issue.
+We welcome contributions! Please feel free to:
+
+- 🐛 Report bugs
+- 💡 Suggest features
+- 📝 Improve documentation
+- 🔧 Submit pull requests
+
+---
+
+## 🙏 Acknowledgments
+
+<div align="center">
+
+Our work builds upon several excellent projects:
+
+[![Inter-GPS](https://img.shields.io/badge/Inter--GPS-Foundation-blue?style=flat-square)](https://github.com/lupantech/InterGPS)
+[![PGDP](https://img.shields.io/badge/PGDP-Diagram%20Parser-green?style=flat-square)](https://github.com/mingliangzhang2018/PGDP)
+[![GeoDRL](https://img.shields.io/badge/GeoDRL-Baseline-orange?style=flat-square)](https://aclanthology.org/2023.findings-acl.850/)
+
+</div>
+
+---
+
+## 📞 Contact
+
+<div align="center">
+
+**Questions or suggestions?**
+
+📧 [zhaojunbo@mail.bnu.edu.cn](mailto:zhaojunbo@mail.bnu.edu.cn)  
+🐙 [Open an Issue](https://github.com/hellozting/Pi-GPS/issues)
+
+---
+
+<sub>Made with ❤️ by the Pi-GPS Team</sub>
+
+</div>
