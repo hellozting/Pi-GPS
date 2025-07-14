@@ -2,12 +2,12 @@
 
 **This paper has been accepted by ICCV 2025.**  
 **Authors:**  
-Junbo Zhao$^{1}$\thanks{Equal contribution.}  
-Ting Zhang$^{1}$\footnotemark[1]  
-Jiayu Sun$^{1}$  
-Mi Tian$^{2}$  
-Hua Huang$^{1}$\thanks{Corresponding author.}  
-$^1$Beijing Normal University &nbsp; $^2$TAL  
+Junbo Zhao<sup>1,†</sup>, Ting Zhang<sup>1,†</sup>, Jiayu Sun<sup>1</sup>, Mi Tian<sup>2</sup>, Hua Huang<sup>1,*</sup>  
+<sup>1</sup>Beijing Normal University  
+<sup>2</sup>TAL  
+
+† Equal contribution.  
+* Corresponding author.
 
 ---
 
